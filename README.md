@@ -2,18 +2,18 @@
 ## Introduction
 For this test I use this technology stack:
 
-    * AngularJS (With angular 4+ patterns)
-    * D3.js (and a modified version of radar-chart-d3)
-    * Sass
-    * Webpack
-    * Babel with preset-env,
-    * node v6.11.2 and npm v3.10.10
-    * yarn 
+ * AngularJS (With angular 4+ patterns)
+ * D3.js (and a modified version of radar-chart-d3)
+ * Sass
+ * Webpack
+ * Babel with preset-env,
+ * node v6.11.2 and npm v3.10.10
+ * yarn 
     
 Directories:
 
-    * `src/components`: All components on this folder are fully reusable. They take some data, do some magic, and run actions when something change. They also are inmutable so the data passed trough these components is never changed nor modified.
-    * `src/dashboard`: This is a simple functional component that makes requests to an API and uses reusable components
+ * `src/components`: All components on this folder are fully reusable. They take some data, do some magic, and run actions when something change. They also are inmutable so the data passed trough these components is never changed nor modified.
+ * `src/dashboard`: This is a simple functional component that makes requests to an API and uses reusable components
     
 ## Develop
 ```bash
@@ -25,9 +25,9 @@ $ npm run build
 ```
 ## Todo
 
-    [] Write unit tests
-    [] Make it Responsive
-    [] Serve code in multiple chunks of code
-    [] Prepare radar-chart to d3 v4
-    [] Separate styles from the main bundle
-    [] Handle errors
+ - [ ] Write unit tests
+ - [ ] Make it Responsive
+ - [ ] Serve code in multiple chunks of code
+ - [ ] Prepare radar-chart to d3 v4
+ - [ ] Separate styles from the main bundle
+ - [ ] Handle errors
