@@ -8,7 +8,8 @@ For this test I use this technology stack:
  * Webpack
  * Babel with preset-env,
  * node v6.11.2 and npm v3.10.10
- * yarn 
+ * yarn
+ * Mocha
     
 Directories:
 
@@ -23,9 +24,13 @@ $ npm run start
 ```bash
 $ npm run build
 ```
+## Test
+```bash
+$ npm test
+```
 ## Todo
 
- - [ ] Write unit tests
+ - [ ] Write more unit tests
  - [ ] Make it Responsive
  - [ ] Serve code in multiple chunks of code
  - [ ] Prepare radar-chart to d3 v4
