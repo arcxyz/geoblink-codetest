@@ -1,0 +1,9 @@
+$radar-chart-primary-color: #0071ac;
+svg {
+  .chart__legend {
+    fill: $radar-chart-primary-color;
+  }
+  .chart__line {
+    stroke: $radar-chart-primary-color;
+  }
+}

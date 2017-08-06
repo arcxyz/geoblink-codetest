@@ -1,0 +1,23 @@
+<div class="radar-chart">
+    <div class="radar-chart__title">
+        General graph comparision
+    </div>
+    <div class="radar-chart__wrapper">
+        <div class="radar-chart__chart">
+
+        </div>
+        <div class="radar-chart__download" ng-click="$ctrl.onDownloadClick()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="944.699" height="944.699" viewBox="0 0 944.699 944.699">
+                <path d="M894.8 579.05H585.3l-41.5 47.2c-18 20.5-44.1 32.3-71.4 32.3-27.3 0-53.4-11.8-71.4-32.3l-41.5-47.2H50c-27.6 0-50 22.4-50 50v198.5c0 27.6 22.4 50 50 50h844.7c27.6 0 50-22.4 50-50v-198.5c.1-27.6-22.3-50-49.9-50zm-755.6 191.9c-23.5 0-42.6-19.102-42.6-42.602s19.1-42.6 42.6-42.6 42.6 19.1 42.6 42.6-19.1 42.602-42.6 42.602z"/>
+                <path d="M419.4 579.05l15.4 17.6c10 11.3 23.8 17 37.6 17s27.6-5.7 37.6-17l15.4-17.6 208.7-237.8c28.4-32.3 5.4-83-37.6-83h-65.6v-141.1c0-27.6-22.4-50-50-50h-217c-27.6 0-50 22.4-50 50v141.2h-65.6c-43 0-65.9 50.7-37.6 83l208.7 237.7z"/>
+            </svg>
+        </div>
+        <div class="radar-chart__summary">
+            <div class="radar-chart__summary-area"
+                 ng-class="$ctrl.getSummaryCustomClass($index)"
+                 ng-repeat="area in $ctrl.data.legend track by $index">
+                {{area}}
+            </div>
+        </div>
+    </div>
+</div>

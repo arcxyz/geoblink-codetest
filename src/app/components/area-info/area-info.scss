@@ -1,0 +1,79 @@
+$area-info-colors: (
+  0: #d71e1a,
+  1: #eb7500,
+  2: #008b9a
+);
+$area-info-white: darken(#ffffff, 5%);
+
+.area-info {
+  min-height: 250px;
+  @media screen and (min-width: 400px) {
+    min-height: 220px;
+  }
+  @media screen and (min-width: 440px) {
+    min-height: 200px;
+  }
+  @media screen and (min-width: 500px) {
+    min-height: 180px;
+  }
+  @media screen and (min-width: 690px) {
+    min-height: 170px;
+  }
+}
+
+.area-info__title {
+  text-transform: uppercase; // For accessibility purposes I do this with CSS
+  font-weight: 400;
+  text-align: center;
+  padding: 0.3em;
+}
+.area-info__box {
+  color: $area-info-white;
+  padding: 1em;
+  text-align: center;
+}
+.area-info__counter {
+  font-size: 2.3em;
+  font-weight: 100;
+}
+.area-info__label {
+  font-weight: 100;
+}
+.area-info__address {
+  text-align: center;
+  padding: 0.6em;
+}
+
+@mixin transition-in($prop) {
+  transition: $prop 0.3s ease-in;
+}
+@mixin transition-out($prop) {
+  transition: $prop 0.3s ease-out;
+}
+
+@each $index, $color in $area-info-colors {
+  .area-info--#{$index} {
+    border-bottom: 2px solid rgba($color, 0.8);
+    @include transition-in(border-color);
+    .area-info__title {
+      color: rgba($color, 0.8);
+      @include transition-in(color);
+    }
+    .area-info__box {
+      background-color: rgba($color, 0.8);
+      @include transition-in(background-color);
+    }
+  }
+  .area-info--#{$index}:hover {
+    border-color: $color;
+    @include transition-out(border-color);
+    .area-info__title {
+      color: $color;
+      @include transition-out(color);
+    }
+    .area-info__box {
+      background-color: $color;
+      @include transition-out(background-color);
+    }
+  }
+}

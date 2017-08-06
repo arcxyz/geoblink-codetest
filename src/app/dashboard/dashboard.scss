@@ -1,0 +1,17 @@
+$dashboard-background-color: #f2f2f2;
+
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.dashboard__summary {
+  display: flex;
+  background-color: $dashboard-background-color;
+  padding: 2em 1.5em;
+  margin-bottom: 2em;
+}
+.dashboard__area-info {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 0.1em;
+}

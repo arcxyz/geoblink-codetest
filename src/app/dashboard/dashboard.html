@@ -1,0 +1,21 @@
+<div class="dashboard">
+    <div class="spinner" ng-if="!$ctrl.ready">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <div class="dashboard__summary">
+        <gblink-area-info
+                class="dashboard__area-info"
+                ng-repeat="area in $ctrl.areaInfoData track by $index"
+                area-data="area">
+        </gblink-area-info>
+    </div>
+    <div class="dashboard__group">
+        <div ng-if="$ctrl.error">There was an error trying to download the stats</div>
+        <gblink-radar-chart
+                ng-if="$ctrl.ready && !$ctrl.error"
+                class="dashboard__radar"
+                radar-data="$ctrl.radarChartData">
+        </gblink-radar-chart>
+    </div>
+</div>

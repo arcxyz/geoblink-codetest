@@ -1,0 +1,76 @@
+$radar-chart-background-color: #f2f2f2;
+$radar-chart-primary-color: #0071ac;
+$radar-chart-colors: (
+        0: #d71e1a,
+        1: #eb7500,
+        2: #008b9a
+);
+
+.radar-chart {
+  background: $radar-chart-background-color;
+  padding: 0.6em;
+}
+
+.radar-chart__title {
+  color: $radar-chart-primary-color;
+  font-weight: 500;
+  font-size: 1.7em;
+  margin-bottom: 0.6em;
+}
+
+.radar-chart__wrapper {
+  background: $radar-chart-primary-color;
+  display: flex;
+  position: relative;
+}
+
+.radar-chart__chart {
+  background: darken($radar-chart-background-color, 10%);
+  flex: 1;
+}
+.radar-chart__summary {
+  background-color: $radar-chart-background-color;
+  border-radius: 5px;
+  padding: 0.7em;
+  margin: auto 0.7em 0.7em 0.7em;
+}
+.radar-chart__summary-area {
+  min-width: 200px;
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 0.7em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &::before {
+    left: 0;
+    bottom: 1px;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1.1em;
+    height: 1.1em;
+  }
+}
+@each $index, $color in $radar-chart-colors {
+  .radar-chart__summary-area--#{$index}::before {
+    background-color: $color;
+  }
+}
+
+.radar-chart__download {
+  position: absolute;
+  right: 255px;
+  top: 10px;
+  cursor: pointer;
+  svg {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in;
+  }
+  svg:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+}
